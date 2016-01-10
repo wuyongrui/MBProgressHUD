@@ -41,6 +41,7 @@
     hud.detailsLabelText = tip;
     hud.detailsLabelFont = [UIFont systemFontOfSize:16.0];
     hud.mode = MBProgressHUDModeText;
+    hud.userInteractionEnabled = NO;
     [hud hide:YES afterDelay:showTime];
     return hud;
 }
@@ -49,6 +50,7 @@
     [self dismissAllHub];
     MBProgressHUD *hud = [self showLoading];
     hud.labelText = tip;
+    hud.userInteractionEnabled = YES;
     return hud;
 }
 
